@@ -22,7 +22,6 @@ IHost host = Host.CreateDefaultBuilder(args)
         //Repository
         services.AddScoped<IClienteRepository, ClienteRepository>();
 
-
         //http
         services.AddScoped<ICadastroApiHttp, CadastroApiHttp>();
         services.AddHttpClient<IRequestHttpClient, RequestHttpClient>();
