@@ -1,4 +1,5 @@
 ﻿using Infra.Dtos;
+using Infra.Enum;
 using Infra.Interfaces;
 
 namespace Infra.Repositories
@@ -15,7 +16,7 @@ namespace Infra.Repositories
 
         public async Task<IEnumerable<ClienteDto>> BuscarClientesPendenteIntegracaoAsync()
         {
-            string query = @"
+            string query = @$"
                                 select 
                                     id as IdIntegracao,
 	                                nome_completo as NomeCompleto, 
@@ -28,7 +29,7 @@ namespace Infra.Repositories
                                 from 
 	                                integracao_cliente
                                 where 
-	                                integrado = 0
+	                                integrado = {(byte)Integrado.Nao}
                             ";
             return await _dapperUtil.RunQueryAsync<ClienteDto>(query);
         }
