@@ -20,7 +20,18 @@ Uma abordagem mais eficiente para inicializar o Dapper e consumir menos memória
 
 ![image](https://github.com/geovanepaz/integracao.http.worker/assets/16936418/f7df745d-2b02-4420-93ac-dab256ccbd7e)
 
-**Inicialização na Program ou IoC **
+**Inicialização na Program ou IoC**
 ![image](https://github.com/geovanepaz/integracao.http.worker/assets/16936418/d227ad92-606e-4ac8-b5c9-32e4cf36d00b)
+
+
+**1 - HttpClient**:
+
+Mesma regra de inicialização do Dapper via injeção de dependência e sem o uso de 'using'.
+
+![image](https://github.com/geovanepaz/integracao.http.worker/assets/16936418/8804f006-e1f4-45f6-b2d5-2987a2b7cbc7)
+
+**Injeção de dependência via add http client:**
+
+![image](https://github.com/geovanepaz/integracao.http.worker/assets/16936418/26fbfcb5-4c3c-4b1b-937c-2f474aa19816)
 
 
